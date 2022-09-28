@@ -1,0 +1,44 @@
+#root {
+    width: 610px;
+    height: 950px;
+    background-color: black;
+    border: 1px solid;
+}
+button {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    font-size: 55px;
+    margin: 10px 11px;
+    background-color: #333333;
+    color: #fff;
+    border: 0;
+}
+.orange {
+    background-color: #FF9F0A;
+    
+}
+.gray {
+    background-color: #A5A5A5;
+    color: #000;
+}
+.zero {
+    width: 280px;
+    height: 130px;
+    border-radius: 65px;
+}
+input {
+    width: 588px;
+    height: 130px;
+    border: 0;
+    background: #000;
+    padding-right: 20px;
+    outline: none;
+}
+
+#result {
+    text-align: right;
+    font-size: 130px;
+    color: #fff;
+    margin-top: 70px;
+}
