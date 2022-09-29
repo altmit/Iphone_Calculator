@@ -1,4 +1,4 @@
-import React , { useState } from 'react';
+import React  from 'react';
 
 const Button = (props) => {
     const result = props.data.result;
@@ -80,6 +80,10 @@ const Button = (props) => {
     }
 
     const point = () => {
+        // 숫자에 소숫점 붙이기
+        if(result.includes('.')){
+           return;
+        }
         setResult(result+".");
         if(number2 === undefined) {
             setNumber1(result);
@@ -101,7 +105,7 @@ const Button = (props) => {
 
         // 1+2*3 되게하기..
 
-        const value = e.target.value;   
+        const value = e.target.value; 
 
         switch(value) {
             case "X" : 
@@ -109,15 +113,13 @@ const Button = (props) => {
                 break;
             case "÷" : 
                 checkOp('/');
+                break;
             case "+" : 
                 checkOp('+'); 
                 break;
             case "-" : 
                 checkOp('-'); 
                 break;
-            case "÷" : 
-                checkOp('/');
-                 break;
             case "AC" : 
                 allClear();
                 break;
