@@ -108,7 +108,7 @@ const Button = (props) => {
         const value = e.target.value; 
 
         switch(value) {
-            case "X" : 
+            case "×" : 
                 checkOp('*'); 
                 break;
             case "÷" : 
@@ -117,7 +117,7 @@ const Button = (props) => {
             case "+" : 
                 checkOp('+'); 
                 break;
-            case "-" : 
+            case "−" : 
                 checkOp('-'); 
                 break;
             case "AC" : 
@@ -141,7 +141,6 @@ const Button = (props) => {
             default : 
                 document.getElementById('clear').value = "C";
                 document.getElementById('clear').textContent = "C";
-
                 if(operation === '' && number1 === 0) {
                     setNumber1(Number(value));
                     setResult(value);
