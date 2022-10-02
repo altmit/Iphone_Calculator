@@ -28,17 +28,19 @@ button {
     border-radius: 65px;
 }
 input {
-    width: 588px;
+    width: 100%;
     height: 130px;
     border: 0;
     background: #000;
-    padding-right: 20px;
     outline: none;
 }
 
-#result {
+#inputText {
     text-align: right;
-    font-size: 130px;
+    font-size: 110px;
     color: #fff;
     margin-top: 70px;
+}
+#inputTextDiv{
+    padding: 0 10px;
 }
