@@ -13,6 +13,7 @@ const Calculator = () => {
     const [number2, setNumber2] = useState();
     // 두 번째 입력 숫자 Number
     const [waiting,setWaiting] = useState("");
+    //사칙연산 우선 순위를 위해 앞 계산을 보류하며 저장
 
     let data = {};
     data = {
@@ -34,7 +35,7 @@ const Calculator = () => {
     return (
         <div>
             <div id="inputTextDiv">
-                <input id="inputText" readOnly maxLength={9} value={inputText}></input>
+                <input id="inputText" readOnly maxLength={9} value={inputText.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}></input>
             </div>
             <div> 
                 <Button id="clear" className="gray" value="AC" data={data}/>

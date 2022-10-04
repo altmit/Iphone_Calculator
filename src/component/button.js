@@ -33,7 +33,6 @@ const Button = (props) => {
         // 계산하는 함수
         // 소수점 포함 총 9자리 제한 생각하기.
         // 자바스크립트 소수점 계산 문제 현상 수정할거 생각하기.
-        // 천단위 , 찍기
 
         if(waiting !== '' && !(op === "+" || op === "-")) {
             runWaiting(isNaN(waiting.charAt(waiting.length-1)) ? (waiting+inputText): (waiting));
@@ -55,7 +54,7 @@ const Button = (props) => {
     }
 
     const runWaiting = (text) => {
-        // 이 함수를 = 또는 다른 연산자 눌렀을 때 실행하기..
+        // 보류했던 계산식을 계산
         let run = new Function('',"return " + text)();
 
         setInputText(String(run));
