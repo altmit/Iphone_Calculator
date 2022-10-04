@@ -2,32 +2,39 @@ import { useState } from "react";
 import Button from "./button";
 
 const Calculator = () => {
-    const [result, setResult] = useState("0");
-    // result input에 표시할 값 String
+    const [inputText, setInputText ] = useState("0");
+    // input에 표시할 값 String
+    const [edit, setEdit] = useState(1);
+    // 현재 입력중인 숫자 number1이면 1 number2이면 2
     const [operation, setOperation] = useState("");
     // 사칙연산
-    const [number1, setNumber1] = useState(0);
+    const [number1, setNumber1] = useState();
     // 첫 입력 숫자 Number
     const [number2, setNumber2] = useState();
     // 두 번째 입력 숫자 Number
+    const [waiting,setWaiting] = useState("");
 
     let data = {};
     data = {
-        result : result,
-        setResult : setResult,
+        edit : edit,
+        setEdit : setEdit,
+        inputText : inputText,
+        setInputText  : setInputText ,
         operation : operation,
         setOperation : setOperation,
         number1 : number1,
         setNumber1 : setNumber1,
         number2 : number2,
-        setNumber2 : setNumber2
+        setNumber2 : setNumber2,
+        waiting : waiting,
+        setWaiting : setWaiting
     }
     
 
     return (
         <div>
-            <div>
-                <input id="result" readOnly maxLength={9} value={result}></input>
+            <div id="inputTextDiv">
+                <input id="inputText" readOnly maxLength={9} value={inputText}></input>
             </div>
             <div> 
                 <Button id="clear" className="gray" value="AC" data={data}/>
